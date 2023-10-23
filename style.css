@@ -455,6 +455,37 @@ header div{
     background-image: none;
     background-color: #f2fcf7;
 }
+.loader{
+    height:30px ;
+    width: 30px;
+    border: 7px solid rgb(251, 182, 61);
+    border-top: 7px solid #26de81;
+    position: absolute;
+    margin: auto;
+    border-radius: 50%;
+    animation: rotate 1s ease-in-out infinite;
+    border-style: dotted;
+    left: 0; 
+  right: 0; 
+  top: 0;
+  bottom: 0;
+}
+.container{
+    opacity: 0.06;
+    
+    
+}
+body{
+    cursor: none;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
 
 
 
