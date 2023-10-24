@@ -36,25 +36,18 @@ searchbtn.addEventListener('click',async ()=>{
                     }
                     return k;
                 }
-               
-                
                 takeInput.innerHTML +=`  <div class="combine-lst">
                 <span style="font-weight: bold; padding-left: 5px; letter-spacing: 3px;">Trending Results</span>
                 <div class="lst">
                 <img  src=${element['Image URL']} alt="">
                 <span> ${element['Actor Name']}</span>
-                
                 <div class="rating-button">
                 <div class="heart">
                 <img class="heart-img" src="https://cdn-icons-png.flaticon.com/128/929/929417.png" alt="$heart">
-                
                 </div>
-                
-                
                 <div class="stars">
                 ${countstars!=""?countstars():"🚫"}
-                </div> 
-                
+                </div>    
                 </div>
                 </div>   
                 </div>`;
@@ -62,15 +55,14 @@ searchbtn.addEventListener('click',async ()=>{
                 heartimg.addEventListener('click',()=>{
                     console.log("Heart Image Clicked");
                     heartimg.src="https://cdn-icons-png.flaticon.com/128/5775/5775601.png"
-                    alert("Added To Favourites");
-                })
-                
-                
+                    
+                    localStorage.setItem(element['Actor Name'],JSON.stringify([element['Actor Name'],element['Image URL'],element['rating']]))
+                    console.log("Item Added To LocalStorage");
+                })         
             }
             else{
                 console.log("Value Not Founded");
             }
-            
         });
     }, 500);
     setTimeout(() => {
@@ -78,6 +70,7 @@ searchbtn.addEventListener('click',async ()=>{
         getcont.style.visibility='hidden'
         container.classList.remove("transparent-bg")
     }, 500);
+    console.log("Reaching Last Of Function");
 })
 darkMode.addEventListener('click',()=>{
     if (mode==0){
