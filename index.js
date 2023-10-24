@@ -29,14 +29,43 @@ searchbtn.addEventListener('click',async ()=>{
         mydata.forEach(element => {
             if(element['Actor Name']==gettextvalue){
                 console.log("Value Found");
+                function countstars(){
+                    k=""
+                    for (let i=0;i<Number(element['rating']);i++){
+                        k+=`<img class="star" src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png">`
+                    }
+                    return k;
+                }
+               
+                
                 takeInput.innerHTML +=`  <div class="combine-lst">
                 <span style="font-weight: bold; padding-left: 5px; letter-spacing: 3px;">Trending Results</span>
                 <div class="lst">
                 <img  src=${element['Image URL']} alt="">
-                ${element['Actor Name']}
-                <button>Info</button>
+                <span> ${element['Actor Name']}</span>
+                
+                <div class="rating-button">
+                <div class="heart">
+                <img class="heart-img" src="https://cdn-icons-png.flaticon.com/128/929/929417.png" alt="$heart">
+                
+                </div>
+                
+                
+                <div class="stars">
+                ${countstars!=""?countstars():"🚫"}
+                </div> 
+                
+                </div>
                 </div>   
                 </div>`;
+                let heartimg=document.querySelector('.heart-img');
+                heartimg.addEventListener('click',()=>{
+                    console.log("Heart Image Clicked");
+                    heartimg.src="https://cdn-icons-png.flaticon.com/128/5775/5775601.png"
+                    alert("Added To Favourites");
+                })
+                
+                
             }
             else{
                 console.log("Value Not Founded");
@@ -57,7 +86,7 @@ darkMode.addEventListener('click',()=>{
         quote.style.borderColor='white'
         mode=1  
     }
-
+    
     else{
         centerPortion.style.backgroundColor='white'
         quote.style.color='black'
@@ -161,5 +190,5 @@ myicon.forEach(element => {
         }
     }) });
     console.log("Our Webiste Is Running");
-
+    
 

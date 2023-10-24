@@ -434,7 +434,7 @@ header div{
 
 .lst img{
     height: 144px;
-    width: 128px;
+    width: 108px;
     border-radius: 15px;
     
     transition: 0.5s;
@@ -496,5 +496,29 @@ header div{
 
     z-index: 9999;
 }
-
+.rating-button img{
+    height: 30px;
+    width: 30px;
+}
+.rating-button{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 110px;
+}
+.stars{
+    display: flex;
+    column-gap: 7px;
+}
+.combine-lst span{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    
+}
+.heart img{
+    border: none;
+    
+    border-radius: 0px;
+}
 
