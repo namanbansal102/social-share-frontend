@@ -9,6 +9,10 @@ let searchbtn=document.querySelector('.searchbtn')
 let takeInput=document.querySelector('.take-input')
 let getcont=document.querySelector('.getcont')
 let container=document.querySelector('.container')
+let user=document.querySelector('.user')
+user.addEventListener('click',()=>{
+    window.location.href="favourites.html"
+})
 mode=0
 async function printJSON() {
     const response = await fetch("data.json");

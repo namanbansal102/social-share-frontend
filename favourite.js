@@ -59,5 +59,5 @@ if(localStorage.length){
         })
     }, 500);
 }else{
-    combinelst.innerHTML+=`<h1 class="nothing-head">No Favourates</h1>`
+    combinelst.innerHTML+=`<h1 class="nothing-head">No Favourites</h1>`
 }
