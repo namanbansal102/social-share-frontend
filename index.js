@@ -9,6 +9,7 @@ let searchbtn=document.querySelector('.searchbtn')
 let takeInput=document.querySelector('.take-input')
 let getcont=document.querySelector('.getcont')
 let container=document.querySelector('.container')
+let flexTopChannels=document.querySelector('.top-channels')
 let user=document.querySelector('.user')
 user.addEventListener('click',()=>{
     window.location.href="favourites.html"
@@ -55,6 +56,7 @@ searchbtn.addEventListener('click',async ()=>{
                 </div>
                 </div>   
                 </div>`;
+                flexTopChannels.style.marginTop='350px';
                 let heartimg=document.querySelector('.heart-img');
                 heartimg.addEventListener('click',()=>{
                     console.log("Heart Image Clicked");
@@ -66,6 +68,7 @@ searchbtn.addEventListener('click',async ()=>{
             }
             else{
                 console.log("Value Not Founded");
+                
             }
         });
     }, 500);
@@ -168,7 +171,7 @@ myicon.forEach(element => {
             }
             else if (elem.alt=='youtube')
             {
-                window.open(`https://www.youtube.com/@${text}`)
+                window.open(`https://www.youtube.com/@${(text.split(" ")).join("")}`)
                 console.log(window.location.href);
 
             }
@@ -186,6 +189,27 @@ myicon.forEach(element => {
             
         }
     }) });
+    let topchannelsImg=document.querySelectorAll('.top-channels-img')
+    let getInfo=document.querySelector('.get-info-div')
+    
+    topchannelsImg.forEach(element => {
+        element.addEventListener('mouseenter',(e)=>{
+            console.log("Mouse Hover Event");
+            console.log(e);
+            getInfo.style.visibility='visible'
+            console.log(e.screenX);
+            getInfo.style.marginTop=`${e.screenY-300}px`
+            getInfo.style.marginLeft=`${e.screenX-300}px`
+            getInfo.innerHTML=`<h2>${element.alt}</h2>`
+            })
+        element.addEventListener('mouseleave',()=>{
+            console.log("Mouse is Outing");
+            getInfo.style.visibility='hidden'
+        })
+        
+    });
+    
+
     console.log("Our Webiste Is Running");
     
 

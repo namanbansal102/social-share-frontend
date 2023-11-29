@@ -4,7 +4,9 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     background: #000000;
+    
     background: linear-gradient(270deg, #FFFFFF, #EBFAED);
+    overflow-x: hidden;
 }
 
 :root {
@@ -82,6 +84,7 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: transparent;
 
 }
 
@@ -171,6 +174,8 @@ footer {
     border-top-right-radius: 3px;
     border-top-left-radius: 3px;
     border: 2px solid black;
+    margin-top: 50px;
+    
 
 }
 
@@ -292,10 +297,7 @@ footer {
     left: 110px;
 }
 
-.footer {
-    position: relative;
-    top: 900px;
-}
+
 
 .center-portion_1 {
     width: 100%;
@@ -645,6 +647,7 @@ header div {
     margin-top: 60px;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
 }
 
 .flex-top-channels{
@@ -652,6 +655,7 @@ header div {
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     row-gap: 40px;
     column-gap: 40px;
+    background-color: transparent;
    
 }
 .flex-top-channels img{
@@ -663,3 +667,175 @@ header div {
 .flex-top-channels img:hover{
     box-shadow: 0px 0px 20px 3px rgb(218, 218, 218);
 }
+.get-info-div{
+    background-color: black;
+    color: white;
+    position: absolute;
+    font-size: 9px;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    cursor: pointer;
+    transition: 0.2s;
+    visibility: hidden;
+}
+.polling-container{
+    height: 91vh;
+    width: 100vw;
+    /* border: 2px solid black; */
+}
+.all-polls{
+    /* border: 2px solid rgb(70, 33, 255); */
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items:end;
+}
+
+.poll-img{
+    height: 100px;
+    border-radius: 50%;
+    width: 100px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+.poll{
+    /* height: 290px; */
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 0.7s;
+    
+}
+.poll-div{
+    
+    /* background-color: #ffa860; */
+    width: 100px;
+    transition: 1.7s;
+}
+.h3{
+    font-size: 20px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.poll:nth-child(1){
+    /* height: 200px; */
+    
+    box-shadow: 0px 0px 5px 0px var(--mainColor);
+    background-color: #3eff9f;
+}
+.poll:nth-child(2){
+    /* height: 400px; */
+    box-shadow: 0px 0px 5px 0px var(--secColor);
+    background-color: var(--secColor);
+}
+.poll:nth-child(3){
+    /* height: 500px; */
+    box-shadow: 0px 0px 5px 0px #f9ca24;
+    background-color:#f9ca24;
+}
+.poll:nth-child(4){
+    /* height: 450px; */
+    box-shadow: 0px 0px 5px 0px #eb4d4b;
+    background-color: #eb4d4b;
+}
+.poll:nth-child(5){
+    /* height: 550px; */
+    box-shadow: 0px 0px 5px 0px #686de0;
+    background-color: #686de0;
+}
+.poll:nth-child(6){
+    /* height: 350px; */
+    box-shadow: 0px 0px 5px 0px #be2edd;
+    background-color: #be2edd;
+}
+.poll:nth-child(7){
+    /* height: 450px; */
+    box-shadow: 0px 0px 5px 0px #badc58;
+    background-color: #badc58;
+}
+.poll:nth-child(8){
+    /* height: 360px; */
+    box-shadow: 0px 0px 5px 0px #ff6b81;
+    background-color:#ff6b81;
+}
+.poll:nth-child(9){
+    /* height: 434px; */
+    box-shadow: 0px 0px 5px 0px #e15f41;
+    background-color: #e15f41;
+}
+.poll-img:hover{
+    scale: 1.2;
+}
+
+.pop-container{
+    box-shadow: 0px 0px 23px 1px #c9c9c9;
+     height: 300px;
+     width: 400px;
+     border-radius:13px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     background-color:#f1fff8 ;
+     position: absolute;
+     z-index: 9999;
+     margin: auto;
+     margin-top: 30vh;
+     margin-left: 70vh;
+     /* transition: 0.6s; */
+     visibility: hidden;
+ }
+ .icon-imgs{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     column-gap: 20px;
+ }
+ .icon-imgs img{
+     height: 70px;
+     cursor: pointer;
+ }
+ .icon-imgs img:hover{
+     scale: 1.2;
+ }
+ .okay{
+     height:50px;
+     width: 100px;
+     font-size: 25px;
+     border-radius: 10px;
+     background-color: #e15f41;
+     border: none;
+     outline: none;
+     color: white;
+     font-weight: bold;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-family: cursive;
+     margin-top: 20px;
+     margin-left: 230px;
+     cursor: pointer;
+     font-family:Arial, Helvetica, sans-serif;
+     
+     
+ }
+ .okay:hover{
+     background-color: #e8ada0;
+     
+ }
+ .pop-container h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ }
+.confetti{
+    position: absolute;
+    z-index: -1;
+}
+
+ 
