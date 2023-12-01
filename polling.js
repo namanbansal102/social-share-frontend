@@ -1,3 +1,4 @@
+
 let allPolls=document.querySelector('.all-polls')
 // console.log("Polling js is Running");
 let okay=document.querySelector('.okay')
