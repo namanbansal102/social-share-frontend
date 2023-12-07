@@ -16,7 +16,7 @@ user.addEventListener('click',()=>{
 })
 mode=0
 async function printJSON() {
-    const response = await fetch("data.json");
+    const response = await fetch("/static/js/data.json");
     const json = await response.json();
     return json;
 }

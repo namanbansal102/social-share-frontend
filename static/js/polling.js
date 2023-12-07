@@ -1,4 +1,6 @@
 let allPolls=document.querySelector('.all-polls')
+var audio = new Audio('/static/sound.mp3');
+audio.play();
 // console.log("Polling js is Running");
 let okay=document.querySelector('.okay')
 let popcontainer=document.querySelector('.pop-container')
@@ -70,6 +72,7 @@ getData.forEach(element => {
         pollImg.forEach(elementImg => {
             elementImg.addEventListener('click',()=>{
                 console.log("Image is Clicked");
+                audio.play()
                 getName=(elementImg.alt.split("-")).join(" ")
                 console.log(getName);
                 foundedElement=JSON.parse(localStorage.getItem(getName))

@@ -1,10 +1,7 @@
 console.log("Favourite.js is Running");
 let combinelst=document.querySelector('.combine-lst')
 
-if(sessionStorage.length!=1){
-
-    
-    
+if(sessionStorage.length!=0){  
     function fetchItems(){
         dict=[]
         for(let i=0;i<sessionStorage.length;i++){
@@ -16,10 +13,8 @@ if(sessionStorage.length!=1){
     }
     lst=fetchItems()
     console.log(lst);
-    
     combinelst.innerHTML+=lst.map((element)=>{
         if(element['ActorName']!=undefined){
-
             function countstars(){
                 k=""
                 for (let i=0;i<Number(element['rating']);i++){
@@ -29,8 +24,6 @@ if(sessionStorage.length!=1){
             }
             let {ActorName,ImageUrl,rating}=element
             let namealt=ActorName.split(" ").join("-")
-            
-            
             return `<div class="lst favourite">
             <img  src=${ImageUrl} alt="">
             <div class="mydivs">
@@ -47,13 +40,10 @@ if(sessionStorage.length!=1){
             
             </div>
             </div>
-            </div> `
-            
-            
+            </div> `  
         }
         })
-        setTimeout(() => {
-            
+        setTimeout(() => {  
             let favImg=document.querySelector('.fav-img')
             favImg.addEventListener('click',(e)=>{
                 console.log("Fav Image Funtion is Running");
