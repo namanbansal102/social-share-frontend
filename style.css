@@ -837,5 +837,99 @@ header div {
     position: absolute;
     z-index: -1;
 }
+.container-login{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/images/liquid-cheese\ \(2\).svg');
+    background-size: 100%;
+    
+    
+}
+.login-container{
+    
+    height: 60vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    row-gap: 40px;
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 15px white;
+    
+
+}
+.enter-text{
+    width: 300px;
+    background-color: ;
+    border-radius: 20px;
+    color: var(--secColor);
+    font-weight: bold;
+    font-size: 28px;
+    /* box-shadow: 0px 0px 5px 7px rgb(250, 248, 248); */
+
+}
+.inp-name{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.up-file img{
+    height: 100px;
+    width: 100px;
+}
+.up-image-label img{
+   
+    height: 100px;
+    width:96px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.6s;
+    
+}
+
+.up-image-label img:hover{
+    scale: 1.2;
+}
+#up-file{
+    display: none;
+}
+.same-div{
+    height: 200px;
+    width: 200px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.upload{
+    width: 100px;
+    height: 50px;
+    border-radius: 7px;
+    background-color:var(--secColor);
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    border: none;
+
+}
+.upload:hover{
+    background-color: rgb(248, 181, 73);
+}
+.c2{
+    background-color: var(--secColor);
+    border-radius: 7px;
+}
+.up-gif{
+    height: 200px;
+    width: 200px;
+}
+
 
  

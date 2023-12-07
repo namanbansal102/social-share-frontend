@@ -1,4 +1,3 @@
-
 let allPolls=document.querySelector('.all-polls')
 // console.log("Polling js is Running");
 let okay=document.querySelector('.okay')
@@ -31,7 +30,7 @@ pollArray=[{
 },{
     'name':"Sahil Joshi Vlogs",
     'imgUrl':"https://yt3.googleusercontent.com/ytc/APkrFKbaA9D4A5yWvkNq8HmqffiZHNwEn-ZENfAccmP7=s900-c-k-c0x00ffffff-no-rj",
-    'poll':20
+    'poll':46
 },{
     'name':"Wanderes Hub",
     'imgUrl':"https://play-lh.googleusercontent.com/9t5ZMMHKdpOiW22w07yBf0ovRxC1ECJKsFvHvAVhrrbxAiTIXyy0aT1oz-YsBm0lSFs",
@@ -67,8 +66,6 @@ getData=fetchItems()
 getData.forEach(element => {
     if (element['name']!=undefined) { 
         callPoll(element)
-        
-
         let pollImg=document.querySelectorAll('.poll-img')
         pollImg.forEach(elementImg => {
             elementImg.addEventListener('click',()=>{
@@ -190,8 +187,19 @@ twitter.addEventListener('click',()=>{
       .then(function (canvas) {
         // It will return a canvas element
         let image = canvas.toDataURL("image/png", 1);
+        console.log("The Type of Image is",typeof image);
         console.log(image);
-        window.location.href=image
+        window.location.href='https://twitter.com/intent/tweet?text=https://ik.imagekit.io/0so2jppdn/Screenshot%202023-12-07%20124224.png?updatedAt=1701933164245'
+        newImg=image.substring(24,image.length-1)
+        getLength=Math.floor((newImg.length/3))
+
+        fetch('http://localhost/generateUrl', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:JSON.stringify({newImg:newImg})  // must match 'Content-Type' header
+        }).then(response=>response.json()).then(jsono=>console.log(jsono))
+            
+        console.log(newImg);
       })
       .catch((e) => {
         // Handle errors

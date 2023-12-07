@@ -62,8 +62,8 @@ searchbtn.addEventListener('click',async ()=>{
                     console.log("Heart Image Clicked");
                     heartimg.src="https://cdn-icons-png.flaticon.com/128/5775/5775601.png"
                     
-                    localStorage.setItem(element['Actor Name'],JSON.stringify([element['Actor Name'],element['Image URL'],element['rating']]))
-                    console.log("Item Added To LocalStorage");
+                    sessionStorage.setItem(element['Actor Name'],JSON.stringify([element['Actor Name'],element['Image URL'],element['rating']]))
+                    console.log("Item Added To sessionStorage");
                 })         
             }
             else{
@@ -212,4 +212,6 @@ myicon.forEach(element => {
 
     console.log("Our Webiste Is Running");
     
-
+document.querySelector('#load-poll').addEventListener('click',()=>{
+    window.location.href='polling.html'
+})
