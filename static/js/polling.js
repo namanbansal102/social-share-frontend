@@ -19,7 +19,7 @@ pollArray=[{
 },
 {
     'name':"Mr.Indian Hacker",
-    'imgUrl':"https://yt3.googleusercontent.com/ytc/APkrFKYuSw_UwxtuE0lTvA2--cixKCKbsKKQXxqmTRVwsQ=s900-c-k-c0x00ffffff-no-rj",
+    'imgUrl':"https://yt3.googleusercontent.com/ytc/APkrFKat0Zit1qboqrFUG02XoL2lfJ_ZaOiPkVjGM203Kw=s900-c-k-c0x00ffffff-no-rj",
     'poll':70
 },{
     'name':"Emiway Batani",
